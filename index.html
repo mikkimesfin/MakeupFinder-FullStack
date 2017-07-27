@@ -1,111 +1,117 @@
 <!DOCTYPE html>
-	<html>
-	  <head>
-	    <meta charset="utf-8">
-	    <title>What's in my Makeup Bag?</title>
-	    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-	    <link rel="stylesheet" href="main.css">
-	  </head>
-	  <body>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>What's in my Makeup Bag?</title>
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
 
 
-	    <header class="container">
-	      <nav>
-	        <div class="nav-wrapper blue darken-4">
-	          <a href="/" class="brand-logo center" id="logo">What is in my makeup bag?</a>
-	        </div>
-	      </nav>
-	    </header>
+	<header class="container">
+		<nav>
+			<div class="nav-wrapper pink darken-4">
+				<a href="/" class="brand-logo center" id="logo">What is in my makeup bag?</a>
+			</div>
+		</nav>
+	</header>
 
 
-	    <main>
-	      <div id="welcome" class="row container blue lighten-1">
-	        <div class="col s12 m12 center">
-	          <a id="welcomeButton" class="waves-effect waves-light btn pink" style="width:50%">See All Cards</a>
-	        </div>
-	        <div class="center">
-	          <form class="" action="index.html" method="post">
-	            <input id="searchBox" type="text" name="" value="" placeholder="Enter ID Here" style="width:10%">
-	            <a id="specificButton" class="waves-effect waves-light btn orange" style="width:25%">See specific card</a>
-	          </form>
-	        </div>
-	      </div>
+	<main>
+		<div id="welcome" class="row container pink lighten-1">
+			<div class="col s12 m12 center">
+				<img class= "center" src="http://cdn.olwomen.com/wp-content/uploads/2015/10/Eye-Shadow.jpg" alt="makeup">
+				<a id="welcomeButton" class="waves-effect waves-light btn pink" style="width:50%">See All Cards</a>
+			</div>
+			<div class="center">
+				<form class="" action="index.html" method="post">
+					<input id="searchBox" type="text" name="" value="" placeholder="Enter ID Here" style="width:10%">
+					<a id="specificButton" class="waves-effect waves-light btn purple" style="width:25%">See specific card</a>
+				</form>
+			</div>
+		</div>
 
 
-	      <div id="cards" class="row container pink lighten-1">
-	        <div class="col s12 m12 center" style="margin-top: 1%">
-	          <a href="#modal1" class="waves-effect waves-light btn green" id="addCard" style="width: 100%">Add Card</a>
-	        </div>
-	        <div class="col s12 m12 center" style="margin-top: 1%">
-	          <a href="#modal2" class="waves-effect waves-light btn orange" id="editCard" style="width: 100%">Edit Card</a>
-	        </div>
-	        <div class="col s12 m12 center" style="margin-top: 1%">
-	          <a href="#modal3" class="waves-effect waves-light btn red" id="deleteCard" style="width: 100%">Delete Card</a>
-	        </div>
-	      </div>
+		<div id="cards" class="row container pink lighten-1">
+			<div class="col s12 m12 center" style="margin-top: 1%">
+				<a href="#modal1" class="waves-effect waves-light btn green" id="addCard" style="width: 100%">Add Card</a>
+			</div>
+			<div class="col s12 m12 center" style="margin-top: 1%">
+				<a href="#modal2" class="waves-effect waves-light btn orange" id="editCard" style="width: 100%">Edit Card</a>
+			</div>
+			<div class="col s12 m12 center" style="margin-top: 1%">
+				<a href="#modal3" class="waves-effect waves-light btn red" id="deleteCard" style="width: 100%">Delete Card</a>
+			</div>
+		</div>
 
 
-	      <div id="modal1" class="modal">
-	        <div class="modal-content">
-	          <h4>New Card</h4>
-	          <form class="" action="" method="post">
-	            <input id="formType" type="text" name="" value="" placeholder="Type">
-	            <input id="formBrand" type="text" name="" value="" placeholder="Brand">
-	            <input id="formPrice" type="text" name="" value="" placeholder="Price">
-	          </form>
-	        </div>
-	        <div class="modal-footer">
-	          <a id="formSubmit" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
-	        </div>
-	      </div>
+		<div id="modal1" class="modal">
+			<div class="modal-content">
+				<h4>New Card</h4>
+				<form class="" action="" method="post">
+					<input id="formType" type="text" name="" value="" placeholder="Type">
+					<input id="formBrand" type="text" name="" value="" placeholder="Brand">
+					<input id="formPrice" type="text" name="" value="" placeholder="Price">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a id="formSubmit" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+			</div>
+		</div>
 
 
-	      <div id="modal2" class="modal">
-	        <div class="modal-content">
-	          <h4>Edit Card</h4>
-	          <form class="" action="" method="post">
-	            <input id="formId2" type="text" name="" placeholder="ID">
-	            <input id="formType2" type="text" name="" placeholder="Type">
-	            <input id="formBrand2" type="text" name="" placeholder="Brand">
-	            <input id="formPrice2" type="text" name="" placeholder="Price">
-	          </form>
-	        </div>
-	        <div class="modal-footer">
-	          <a id="formSubmit2" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
-	        </div>
-	      </div>
+		<div id="modal2" class="modal">
+			<div class="modal-content">
+				<h4>Edit Card</h4>
+				<form class="" action="" method="post">
+					<input id="formId2" type="text" name="" placeholder="ID">
+					<input id="formType2" type="text" name="" placeholder="Type">
+					<input id="formBrand2" type="text" name="" placeholder="Brand">
+					<input id="formPrice2" type="text" name="" placeholder="Price">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a id="formSubmit2" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+			</div>
+		</div>
 
 
-	      <div id="modal3" class="modal">
-	        <div class="modal-content">
-	          <h4>Delete Card</h4>
-	          <form class="" action="" method="post">
-	            <input id="formId3" type="text" name="" placeholder="ID">
-	          </form>
-	        </div>
-	        <div class="modal-footer">
-	          <a id="formSubmit3" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
-	        </div>
-	      </div>
-
-
-	    </main>
+		<div id="modal3" class="modal">
+			<div class="modal-content">
+				<h4>Delete Card</h4>
+				<form class="" action="" method="post">
+					<input id="formId3" type="text" name="" placeholder="ID">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<a id="formSubmit3" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+			</div>
+		</div>
 
 
 
 
-	    <footer class="page-footer blue darken-4 container">
-	      <div class="footer-copyright center">
-	        <div class="container">
-	          © 2017 Copyright Mikki Mesfin
-	        </div>
-	      </div>
-	    </footer>
+	</main>
 
 
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-	    <script src="app.js" charset="utf-8"></script>
-	  </body>
-	</html>
+
+
+	<footer class="page-footer pink darken-4 container">
+		<div class="footer-copyright center">
+			<div class="container">
+				© 2017 Copyright Mikki Mesfin
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+	<script src="app.js" charset="utf-8"></script>
+</body>
+
+</html>

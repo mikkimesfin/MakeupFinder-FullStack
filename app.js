@@ -1,18 +1,18 @@
 $(document).ready(() => {
   $('.modal').modal()
 })
-
+//get
 $('#welcomeButton').click(function() {
   $.get('https://rocky-beach-86199.herokuapp.com/inventory')
     .then((data) => {
       for (var i = 0; i < data.length; i++) {
         $('#cards').append(`
 	          <div id="card${data[i].id}" class="col s12 m6">
-	            <div class="card blue-grey darken-1">
+	            <div class="card pink darken-4">
 	              <div class="card-content white-text">
 	                <span id="card${data[i].id}" class="card-title">${data[i].type}</span>
 	                <p id="brand${data[i].id}">Type: ${data[i].brand}</p>
-	                <p id="price${data[i].id}">Price: ${data[i].price}</p>
+	                <p id="price${data[i].id}">Price: $${data[i].price}</p>
 	                <p>ID: ${data[i].id} </p>
 	              </div>
 	            </div>
@@ -24,17 +24,18 @@ $('#welcomeButton').click(function() {
   document.getElementById('cards').style.display = 'block'
 })
 
+//enter an id to get a speicifc makeup
 $('#specificButton').click(() => {
   var id = $('#searchBox').val()
   $.get(`https://rocky-beach-86199.herokuapp.com/inventory/${id}`).then((data) => {
     if (data.length != 0) {
       $('#cards').append(`
 	          <div id="card${data[0].id}" class="col s12 m6">
-	            <div class="card blue - grey darken-1">
+	            <div class="card pink darken-4">
 	              <div class="card-content white-text">
 	                <span class="card-title">${data[0].type}</span>
 	                <p>Brand: ${data[0].brand}</p>
-	                <p>Price: ${data[0].price}</p>
+	                <p>Price: $${data[0].price}</p>
 	                <p>ID: ${data[0].id} </p>
 	              </div>
 	            </div>
@@ -48,7 +49,7 @@ $('#specificButton').click(() => {
   })
 })
 
-
+//add a new make up card
 $('#addCard').click(function() {
   $('#modal1').modal('open')
 })
@@ -65,18 +66,18 @@ $('#formSubmit').click(function() {
     price: price
   }
 
-
+//posting
   if (type && brand && price) {
     $.post('https://rocky-beach-86199.herokuapp.com/inventory', postData)
     .then((id) => {
       $.get(`https://rocky-beach-86199.herokuapp.com/inventory/${id}`).then((data) => {
         $('#cards').append(`
 	            <div id="card${data[0].id}" class="col s12 m6">
-	              <div class="card blue-grey darken-1">
+	              <div class="card pink darken-4">
 	                <div class="card-content white-text">
 	                  <span class="card-title">${data[0].type}</span>
 	                  <p>Brand: ${data[0].brand}</p>
-	                  <p>Price: ${data[0].price}</p>
+	                  <p>Price: $${data[0].price}</p>
 	                  <p>ID: ${data[0].id} </p>
 	                </div>
 	              </div>
@@ -91,12 +92,12 @@ $('#formSubmit').click(function() {
   }
 })
 
-
+//click function for editing
 $('#editCard').click(function() {
   $('#modal2').modal('open')
 })
 
-
+//make into an object again
 $('#formSubmit2').click(function() {
   var id = $('#formId2').val()
   var type = $('#formType2').val()
@@ -108,7 +109,7 @@ $('#formSubmit2').click(function() {
     price: price
   }
 
-
+//updating a card
   if (id && type && brand && price) {
     $.ajax({
       url: `https://rocky-beach-86199.herokuapp.com/inventory/${id}`,
@@ -118,11 +119,11 @@ $('#formSubmit2').click(function() {
       $(`#card${id}`).remove()
       $('#cards').append(`
 	          <div id="card${data[0].id}" class="col s12 m6">
-	            <div class="card blue-grey darken-1">
+	            <div class="card pink darken-4">
 	              <div class="card-content white-text">
 	                <span class="card-title">${data[0].type}</span>
 	                <p>Brand: ${data[0].brand}</p>
-	                <p>Price: ${data[0].price}</p>
+	                <p>Price: $${data[0].price}</p>
 	                <p>ID: ${data[0].id} </p>
 	              </div>
 	            </div>
@@ -134,7 +135,7 @@ $('#formSubmit2').click(function() {
   }
 })
 
-
+//deleting a card
 $('#deleteCard').click(function() {
   $('#modal3').modal('open')
 })
