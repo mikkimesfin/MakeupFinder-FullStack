@@ -3,7 +3,7 @@ $(document).ready(() => {
 })
 
 $('#welcomeButton').click(function() {
-  $.get('https://rocky-beach-86199.herokuapp.com')
+  $.get('https://rocky-beach-86199.herokuapp.com/inventory')
     .then((data) => {
       for (var i = 0; i < data.length; i++) {
         $('#cards').append(`
@@ -26,7 +26,7 @@ $('#welcomeButton').click(function() {
 
 $('#specificButton').click(() => {
   var id = $('#searchBox').val()
-  $.get(`https://rocky-beach-86199.herokuapp.com/${id}`).then((data) => {
+  $.get(`https://rocky-beach-86199.herokuapp.com/inventory/${id}`).then((data) => {
     if (data.length != 0) {
       $('#cards').append(`
 	          <div id="card${data[0].id}" class="col s12 m6">
@@ -67,9 +67,9 @@ $('#formSubmit').click(function() {
 
 
   if (type && brand && price) {
-    $.post('https://rocky-beach-86199.herokuapp.com', postData)
+    $.post('https://rocky-beach-86199.herokuapp.com/inventory', postData)
     .then((id) => {
-      $.get(`https://rocky-beach-86199.herokuapp.com/${id}`).then((data) => {
+      $.get(`https://rocky-beach-86199.herokuapp.com/inventory/${id}`).then((data) => {
         $('#cards').append(`
 	            <div id="card${data[0].id}" class="col s12 m6">
 	              <div class="card blue-grey darken-1">
@@ -111,7 +111,7 @@ $('#formSubmit2').click(function() {
 
   if (id && type && brand && price) {
     $.ajax({
-      url: `https://rocky-beach-86199.herokuapp.com/${id}`,
+      url: `https://rocky-beach-86199.herokuapp.com/inventory/${id}`,
       type: 'PUT',
       data: putData
     }).then((data) => {
@@ -144,7 +144,7 @@ $('#formSubmit3').click(function() {
   var id = $('#formId3').val()
   if (id) {
     $.ajax({
-      url: `https://rocky-beach-86199.herokuapp.com/${id}`,
+      url: `https://rocky-beach-86199.herokuapp.com/inventory/${id}`,
       type: 'DELETE'
     })
     $(`#card${id}`).remove()
