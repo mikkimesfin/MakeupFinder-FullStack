@@ -1,53 +1,111 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
- <link href="css/bootstrap.min.css" rel="stylesheet">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="/main.css">
-
-  <head>
-    <meta charset="utf-8">
-    <title>Makeup List</title>
-
-  </head>
-  <body>
-    <header>My Makeup List</header>
-
-    <form class="form-inline">
-      <div class="form-group">
-        <label for="brand">Brand</label>
-        <input type="text" class="form-control" id="brand" placeholder="Enter a Brand (ex. Nars)">
-      </div>
-      <div class="form-group">
-        <label for="type">Type</label>
-        <input type="text" class="form-control" id="type" placeholder="Enter a Type (ex. Foundation)">
-      </div>
-      <div class="form-group">
-        <label for="price">Price</label>
-        <input type="text" class="form-control" id="price" placeholder="Enter a Price (ex. $38.00)">
-      </div>
-      <button type="submit" class="btn btn-default">Send invitation</button>
-    </form>
-
-    <section>
-  <ul class= "inventory">
-  </ul>
-    </section>
-
-  <div id="inventory" class="row">
-</div>
+	<html>
+	  <head>
+	    <meta charset="utf-8">
+	    <title>What's in my Makeup Bag?</title>
+	    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+	    <link rel="stylesheet" href="style.css">
+	  </head>
+	  <body>
 
 
+	    <header class="container">
+	      <nav>
+	        <div class="nav-wrapper blue darken-4">
+	          <a href="/" class="brand-logo center" id="logo">What is in my makeup bag?</a>
+	        </div>
+	      </nav>
+	    </header>
+
+
+	    <main>
+	      <div id="welcome" class="row container blue lighten-1">
+	        <div class="col s12 m12 center">
+	          <a id="welcomeButton" class="waves-effect waves-light btn pink" style="width:50%">See All Cards</a>
+	        </div>
+	        <div class="center">
+	          <form class="" action="index.html" method="post">
+	            <input id="searchBox" type="text" name="" value="" placeholder="Enter ID Here" style="width:10%">
+	            <a id="specificButton" class="waves-effect waves-light btn orange" style="width:25%">See specific card</a>
+	          </form>
+	        </div>
+	      </div>
+
+
+	      <div id="cards" class="row container pink lighten-1">
+	        <div class="col s12 m12 center" style="margin-top: 1%">
+	          <a href="#modal1" class="waves-effect waves-light btn green" id="addCard" style="width: 100%">Add Card</a>
+	        </div>
+	        <div class="col s12 m12 center" style="margin-top: 1%">
+	          <a href="#modal2" class="waves-effect waves-light btn orange" id="editCard" style="width: 100%">Edit Card</a>
+	        </div>
+	        <div class="col s12 m12 center" style="margin-top: 1%">
+	          <a href="#modal3" class="waves-effect waves-light btn red" id="deleteCard" style="width: 100%">Delete Card</a>
+	        </div>
+	      </div>
+
+
+	      <div id="modal1" class="modal">
+	        <div class="modal-content">
+	          <h4>New Card</h4>
+	          <form class="" action="" method="post">
+	            <input id="formType" type="text" name="" value="" placeholder="Type">
+	            <input id="formBrand" type="text" name="" value="" placeholder="Brand">
+	            <input id="formPrice" type="text" name="" value="" placeholder="Price">
+	          </form>
+	        </div>
+	        <div class="modal-footer">
+	          <a id="formSubmit" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+	        </div>
+	      </div>
+
+
+	      <div id="modal2" class="modal">
+	        <div class="modal-content">
+	          <h4>Edit Card</h4>
+	          <form class="" action="" method="post">
+	            <input id="formId2" type="text" name="" placeholder="ID">
+	            <input id="formType2" type="text" name="" placeholder="Type">
+	            <input id="formBrand2" type="text" name="" placeholder="Brand">
+	            <input id="formPrice2" type="text" name="" placeholder="Price">
+	          </form>
+	        </div>
+	        <div class="modal-footer">
+	          <a id="formSubmit2" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+	        </div>
+	      </div>
+
+
+	      <div id="modal3" class="modal">
+	        <div class="modal-content">
+	          <h4>Delete Card</h4>
+	          <form class="" action="" method="post">
+	            <input id="formId3" type="text" name="" placeholder="ID">
+	          </form>
+	        </div>
+	        <div class="modal-footer">
+	          <a id="formSubmit3" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+	        </div>
+	      </div>
+
+
+	    </main>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="js/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src="/app.js"></script>
-  </body>
-</html>
+	    <footer class="page-footer blue darken-4 container">
+	      <div class="footer-copyright center">
+	        <div class="container">
+	          © 2017 Copyright Mikki Mesfin
+	        </div>
+	      </div>
+	    </footer>
+
+
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+	    <script src="app.js" charset="utf-8"></script>
+	  </body>
+	</html>
