@@ -1,4 +1,5 @@
-This is a full stack app that lets you see what make up products that you currently have. You can add, edit, and delete items from your inventory.
+This full stack node application allows you to open up my makeup bag, and  check what items I currently have. You can add, edit, and delete the inventory.
 
-the client side is deployed to firebase: https://fullstackapp-4e8dd.firebaseapp.com
-the server is deployed to heroku: https://rocky-beach-86199.herokuapp.com/inventory
+Technologies: Node, Express, Knex, Heroku for the backend server; Firebase and Javascript for the front end client side.
+
+Deployed Links: https://fullstackapp-4e8dd.firebaseapp.com
